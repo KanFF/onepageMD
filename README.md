@@ -29,5 +29,9 @@ At the start (only once):
 ### Advanced configurations:
 1. Setup github webhooks to activate auto update of your markdown files (with a secret in the config file).
 
-### Content production workflow
-...
+### Preview of steps for content production
+When the content is already created and translated, and that the content must be updated...
+1. Update the content of the default language file and update its version in the cartouche.
+1. You can already submit it if it's okay for you to have a content not entirely translated for a while. (Submit = git push if web hooks enabled, or upload the files on your server. The versions of each text (each translation) is displayed and the latest version number too (to know if the current content displayed in another language is up-to-date or not.
+1. Update the translations in other languages and submit them.
+1. The content are now published and you're done.
