@@ -1,5 +1,5 @@
 {
-    "onepagemd-template-version": 0.1,
+    "onepagemd-template-version": 0.2,
     "main-title": "Portfolio",
     "title": "Onepage Portfolio - by Diara Goi",
     "version": "vX.X",
@@ -51,11 +51,11 @@
     "style": {
         "css-md-style": "default_kanff",
         "font-list": "Verdana, Consolas, sans-serif",
-        "font-size": "0.8em",
+        "font-size": "1em",
         "body": {
-            "maxwidth": "800px",
-            "font-color": "#556611",
-            "background-color": "#112255"
+            "maxwidth": "1000px",
+            "font-color": "#262626",
+            "background-color": "#f7f7f7"
         },
         "load-css-files": [
             "css/md.css",
