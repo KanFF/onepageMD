@@ -1,0 +1,82 @@
+/**
+ *  Project: onepageMD
+ *  File: kanff.css the default style sheet
+ *  Author: Samuel Roland
+ *  Creation date: 20.02.2021
+ */
+
+.mdstyle img {
+  border: 1px #717171 solid;
+  max-height: 900px;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.mdstyle .thinBlackBorderForTitle {
+  margin: 0px !important;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #38417f;
+  color: #38417f;
+}
+
+.mdstyle h1 {
+  padding-bottom: 5px;
+  color: #38417f;
+}
+
+.mdstyle .thinBlackBorderForTitle h1 {
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.mdstyle h2 {
+  margin-top: 0.6em;
+  color: #348a19;
+  border-bottom: 1px solid;
+  padding-bottom: 2px;
+}
+
+.mdstyle h3 {
+  margin-top: 0.5em;
+  color: #ff7700;
+}
+
+.mdstyle h4 {
+  margin-top: 0.5em;
+  color: #4fb6e3;
+}
+
+.mdstyle h5 {
+  margin-top: 0.5em;
+  color: #4fb6e3;
+}
+
+.mdstyle h6 {
+  margin-top: 0.5em;
+  color: #4fb6e3;
+}
+
+.mdstyle p code,
+.mdstyle li code {
+  color: darkblue;
+  background-color: #aedaf2;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+}
+
+.mdstyle pre {
+  background-color: #c5d2ff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.mdstyle li {
+  margin-bottom: 7px;
+}
+
+.mdstyle .mdTOC li {
+  margin: 0;
+}
