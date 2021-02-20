@@ -54,7 +54,7 @@
         "font-size": "1em",
         "body": {
             "maxwidth": "1000px",
-            "font-color": "#262626",
+            "font-color": "#fffff",
             "background-color": "#f7f7f7"
         },
         "load-css-files": [

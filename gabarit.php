@@ -20,7 +20,7 @@ $title = $config['title'];
     <!-- CSS files -->
     <?php
     //TODO: choose the CSS file to load
-    echo '<link href="css/kanff.css" rel="stylesheet">';
+    echo '<link href="css/blackandwhite.css" rel="stylesheet">';
     ?>
 </head>
 
