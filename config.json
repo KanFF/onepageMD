@@ -49,7 +49,7 @@
         }
     },
     "style": {
-        "css-md-style": "default_kanff",
+        "basic-style": "default_kanff",
         "font-list": "Verdana, Consolas, sans-serif",
         "font-size": "1em",
         "body": {

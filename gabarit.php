@@ -20,7 +20,16 @@ $title = $config['title'];
     <!-- CSS files -->
     <?php
     //TODO: choose the CSS file to load
-    echo '<link href="css/kanff.css" rel="stylesheet">';
+    $basicstyle = $config['style']['basic-style'];
+    if ($basicstyle != null && in_array($basicstyle, array_keys(CSS_FILES)) == true) {
+        echo '<link href="' . CSS_FILES[$basicstyle] . '" rel="stylesheet">';
+    }
+    $styles = $config['style']['load-css-files'];
+    foreach ($styles as $style) {
+        if ($style != null) {
+            echo '<link href="' . $style . '" rel="stylesheet">';
+        }
+    }
     ?>
 </head>
 

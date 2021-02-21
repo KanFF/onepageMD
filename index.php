@@ -8,6 +8,7 @@
  */
 
 require "helpers.php";
+require "constants.php";
 
 checkConfigBeforeLoading();
 $config = json_decode(file_get_contents("config.json"), true);

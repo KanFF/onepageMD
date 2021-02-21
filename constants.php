@@ -8,7 +8,7 @@
  */
 
 //List all the style sheets natively available
-define("CSS-files", [
+define("CSS_FILES", [
     "default_kanff" => "css/kanff.css",
     "black_and_white" => "css/blackandwhite.css",
 ]);
