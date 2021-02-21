@@ -11,10 +11,24 @@ require "helpers.php";
 require "constants.php";
 
 checkConfigBeforeLoading();
-$config = json_decode(file_get_contents("config.json"), true);
+$config = getConfig();
+
+
+//TODO: choose the language depending on the cookies
+$language = null;
+if (isset($_COOKIE['lang']) == true && isLanguageAvailable($_COOKIE['lang'])) {
+    $language = $_COOKIE['lang'];
+    setcookie("lang", $_COOKIE['lang']);
+} else {
+    $language = $config['content']['default_language'];
+    setcookie("lang", $language);
+}
 
 //Get MD content
-//TODO: choose the language depending on the cookies
-$content = MDToHTML(getRawMDForAGivenLanguage("en"));
-
-require_once "gabarit.php";
+$rawMDContent = getRawMDForAGivenLanguage($language);
+if ($rawMDContent != false) {
+    $content = MDToHTML(getRawMDForAGivenLanguage($language));
+    require_once "gabarit.php"; //get the template and include the content inside
+} else {
+    require_once "error.php";    //the error page is displayed
+}

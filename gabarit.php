@@ -31,6 +31,7 @@ $title = $config['title'];
         }
     }
     ?>
+    <script src="main.js"></script>
 </head>
 
 <body style="background-color: <?= $config['style']['body']['background-color'] ?>;
@@ -42,11 +43,11 @@ $title = $config['title'];
  padding: 0 15px;
  ">
     <h1><?= $maintitle ?></h1>
-    <select name="language" id="sltLanguage">
+    <select name="language" id="sltLanguage" required>
         <?php
         $files = $config['content']['content-files'];
         foreach ($files as $file) {
-            echo "<option value='{$file['id']}'>{$file['language']} - {$file['version']}</option>";
+            echo "<option value='{$file['id']}' " . ($language == $file['id'] ? "selected" : "") . " >{$file['language']} - {$file['version']}</option>";
         }
         ?></select>
     <div class="mdstyle">

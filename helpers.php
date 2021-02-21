@@ -21,5 +21,26 @@ function checkConfigBeforeLoading()
 
 function getRawMDForAGivenLanguage($language_id)
 {
-    return file_get_contents("content/content-" . $language_id . ".md");
+    $filepath = "content/content-" . $language_id . ".md";
+    if (file_exists($filepath) == false) {
+        return false;
+    }
+    return file_get_contents($filepath);
+}
+
+function isLanguageAvailable($lang)
+{
+    $config = getConfig();
+    $contents = $config['content']['content-files'];
+    foreach ($contents as $content) {
+        if ($content['id'] == $lang) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function getConfig()
+{
+    return json_decode(file_get_contents("config.json"), true);
 }
