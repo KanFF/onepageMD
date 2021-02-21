@@ -34,22 +34,36 @@ $title = $config['title'];
     <script src="main.js"></script>
 </head>
 
-<body style="background-color: <?= $config['style']['body']['background-color'] ?>;
+<body class="mdstyle" style="background-color: <?= $config['style']['body']['background-color'] ?>;
  color: <?= $config['style']['body']['font-color'] ?>;
  font-family: <?= $config['style']['font-list'] ?>;
  font-size: <?= $config['style']['font-size'] ?>;
  max-width: <?= $config['style']['body']['maxwidth'] ?>;
- margin: auto;
+ margin: 30px auto;
  padding: 0 15px;
  ">
-    <h1><?= $maintitle ?></h1>
-    <select name="language" id="sltLanguage" required>
-        <?php
-        $files = $config['content']['content-files'];
-        foreach ($files as $file) {
-            echo "<option value='{$file['id']}' " . ($language == $file['id'] ? "selected" : "") . " >{$file['language']} - {$file['version']}</option>";
-        }
-        ?></select>
+    <div class="thinBlackBorderForTitle " style="display: flex; flex-wrap: wrap;">
+        <h1 style="min-width: max-content; flex: 1;"><?= $maintitle ?></h1>
+        <span style="display: flex; flex-direction: column; align-items: end; justify-content: end; min-width: max-content;">
+            <span style="display: inline;">
+                <strong><?= $config['author'] ?></strong> -
+                <a href="mailto:<?= $config['email'] ?>">Email</a> -
+                <a href="<?= prefixURLIfRelative($config['link']) ?>"><?= $config['link-placeholder'] ?></a>
+            </span>
+            <span style="display: inline;" title="Version 0.2.2 sortie le 02.01.2021 à 23:10.">v0.2.2</em>
+                <select name="language" id="sltLanguage" required>
+                    <?php
+                    $files = $config['content']['content-files'];
+                    foreach ($files as $file) {
+                        echo "<option value='{$file['id']}' " . ($language == $file['id'] ? "selected" : "") . " >{$file['language']} - {$file['version']}</option>";
+                    }
+                    ?>
+                </select>
+            </span>
+        </span>
+    </div>
+
+
     <div class="mdstyle">
         <?= $content ?>
     </div>

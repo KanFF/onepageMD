@@ -4,7 +4,13 @@
  *  Author: Samuel Roland
  *  Creation date: 20.02.2021
  */
+/* Header */
+select {
+  border: none;
+  background-color: #aedaf2;
+}
 
+/* Markdown styles */
 .mdstyle {
   line-height: 1.4;
   font-size: 1em;

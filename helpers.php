@@ -44,3 +44,11 @@ function getConfig()
 {
     return json_decode(file_get_contents("config.json"), true);
 }
+
+function prefixURLIfRelative($url)
+{
+    if (substr($url, 0, 7) != "http://" || substr($url, 0, 8) != "https://") {
+        return "http://" . $url;
+    }
+    return $url;
+}
