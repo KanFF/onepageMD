@@ -24,17 +24,17 @@
             {
                 "id": "en",
                 "language": "English",
-                "version": "vX.Y"
+                "version": "v1.5"
             },
             {
                 "id": "fr",
                 "language": "Français",
-                "version": "vZ.Y"
+                "version": "v1.6"
             },
             {
                 "id": "de",
                 "language": "Deutsch",
-                "version": "vZ.X"
+                "version": "v1.5"
             }
         ],
         "php_script_to_load": [

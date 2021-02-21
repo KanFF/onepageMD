@@ -8,6 +8,7 @@
  */
 $maintitle = $config['main-title'];
 $title = $config['title'];
+$defaultlanguage = $config['content']['default_language'];
 ?>
 
 <!DOCTYPE HTML>
@@ -50,12 +51,13 @@ $title = $config['title'];
                 <a href="mailto:<?= $config['email'] ?>">Email</a> -
                 <a href="<?= prefixURLIfRelative($config['link']) ?>"><?= $config['link-placeholder'] ?></a>
             </span>
-            <span style="display: inline;" title="Version 0.2.2 sortie le 02.01.2021 à 23:10.">v0.2.2</em>
+            <span>
+                <span style="display: inline; cursor: help;" title="Version of the text (highest version of the translations)."><?= getTextVersion() ?></span>
                 <select name="language" id="sltLanguage" required>
                     <?php
                     $files = $config['content']['content-files'];
                     foreach ($files as $file) {
-                        echo "<option value='{$file['id']}' " . ($language == $file['id'] ? "selected" : "") . " >{$file['language']} - {$file['version']}</option>";
+                        echo "<option value='{$file['id']}' " . ($language == $file['id'] ? "selected" : "") . " >{$file['language']} - {$file['version']}" . ($defaultlanguage == $file['id'] ? " (default)" : "") . "</option>";
                     }
                     ?>
                 </select>

@@ -52,3 +52,16 @@ function prefixURLIfRelative($url)
     }
     return $url;
 }
+
+function getTextVersion()
+{
+    $config = getConfig();
+    $contents = $config['content']['content-files'];
+    $highestVersion = null;
+    foreach ($contents as $content) {
+        if ($content['version'] > $highestVersion) {
+            $highestVersion = $content['version'];
+        }
+    }
+    return $highestVersion;
+}
