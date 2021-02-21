@@ -20,7 +20,7 @@ $title = $config['title'];
     <!-- CSS files -->
     <?php
     //TODO: choose the CSS file to load
-    echo '<link href="css/blackandwhite.css" rel="stylesheet">';
+    echo '<link href="css/kanff.css" rel="stylesheet">';
     ?>
 </head>
 
@@ -30,6 +30,7 @@ $title = $config['title'];
  font-size: <?= $config['style']['font-size'] ?>;
  max-width: <?= $config['style']['body']['maxwidth'] ?>;
  margin: auto;
+ padding: 0 15px;
  ">
     <h1><?= $maintitle ?></h1>
     <select name="language" id="sltLanguage">
