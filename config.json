@@ -18,7 +18,7 @@
             "copy-anchor-button": true,
             "go-to-anchor-when-copy-anchor": false
         },
-        "default_language": "en",
+        "default_language": "fr",
         "content-files": [
             {
                 "id": "en",
