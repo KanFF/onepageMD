@@ -8,12 +8,17 @@
  */
 $maintitle = $config['main-title'];
 if ($maintitle == "[INSIDE]") {
-    $startPositionTitle = strpos($content, "<h1>") + 4;
-    $titleInMD = substr($content, $startPositionTitle, strpos($content, "</h1>") - $startPositionTitle);
-    $maintitle = $titleInMD;
+    $startPositionTitle = strpos($content, "<h1>");
+    if ($startPositionTitle !== false) {
+        $startPositionTitle = strpos($content, "<h1>") + 4;
+        $titleInMD = substr($content, $startPositionTitle, strpos($content, "</h1>") - $startPositionTitle);
+        $maintitle = $titleInMD;
 
-    //Remove the title in $content (otherwise, the title will be displayed 2 times)
-    $content = str_replace("<h1>" . $titleInMD . "</h1>", "", $content);
+        //Remove the title in $content (otherwise, the title will be displayed 2 times)
+        $content = str_replace("<h1>" . $titleInMD . "</h1>", "", $content);
+    } else {
+        $maintitle = "No title";
+    }
 }
 $title = $config['title'];
 $defaultlanguage = $config['content']['default_language'];
