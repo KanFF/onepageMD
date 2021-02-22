@@ -10,29 +10,7 @@ Rédaction: Samuel, Relecture: Benoît. Version 1.1 du 03.11.2020.
 ## **Table des matières**
 <!-- MDTOC maxdepth:6 firsth1:1 numbering:0 flatten:0 bullets:1 updateOnSave:1 -->
 
-- [KanFF - Documentation technique](#kanff-documentation-technique)   
-   - [Documentations liées spécifiques:](#documentations-liées-spécifiques)   
-   - [**Table des matières**](#table-des-matières)   
-      - [Cadre, description et motivation](#cadre-description-et-motivation)   
-      - [Organisation](#organisation)   
-         - [Découpage](#découpage)   
-      - [Objectifs](#objectifs)   
-   - [Analyse](#analyse)   
-      - [Modèle Conceptuel de Données](#modèle-conceptuel-de-données)   
-      - [Modèle Logique de Données](#modèle-logique-de-données)   
-   - [Stratégie de test](#stratégie-de-test)   
-   - [Implémentation](#implémentation)   
-      - [Vue d’ensemble](#vue-d’ensemble)   
-      - [Description technique](#description-technique)   
-      - [Points techniques spécifiques](#points-techniques-spécifiques)   
-      - [Livraisons](#livraisons)   
-      - [Erreurs restantes](#erreurs-restantes)   
-   - [Conclusions](#conclusions)   
-      - [Objectifs atteints:](#objectifs-atteints)   
-      - [Objectifs non-atteints:](#objectifs-non-atteints)   
-   - [Annexes](#annexes)   
-      - [Sources – Bibliographie](#sources-–-bibliographie)   
-      - [Journal de bord du projet](#journal-de-bord-du-projet)   
+[INSERT TOC HERE]
 
 <!-- /MDTOC -->
 

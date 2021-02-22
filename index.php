@@ -27,7 +27,8 @@ if (isset($_COOKIE['lang']) == true && isLanguageAvailable($_COOKIE['lang'])) {
 //Get MD content
 $rawMDContent = getRawMDForAGivenLanguage($language);
 if ($rawMDContent != false) {
-    $content = MDToHTML(getRawMDForAGivenLanguage($language));
+    $content = getRawMDForAGivenLanguage($language);
+    $content = lauchOperationsOnContent($content);
     require_once "gabarit.php"; //get the template and include the content inside
 } else {
     require_once "error.php";    //the error page is displayed
