@@ -49,7 +49,8 @@ $defaultlanguage = $config['content']['default_language'];
             <span style="display: inline;">
                 <strong><?= $config['author'] ?></strong> -
                 <a href="mailto:<?= $config['email'] ?>">Email</a> -
-                <a href="<?= prefixURLIfRelative($config['link']) ?>"><?= $config['link-placeholder'] ?></a>
+                <a href="<?= prefixURLIfRelative($config['link']) ?>"><?= $config['link-placeholder'] ?></a> -
+                <a href="<?= prefixURLIfRelative($config['sourcelink']) ?>">Source</a>
             </span>
             <span>
                 <span style="display: inline; cursor: help;" title="Version of the text (highest version of the translations)."><?= getTextVersion() ?></span>
