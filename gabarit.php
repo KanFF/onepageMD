@@ -32,6 +32,7 @@ $defaultlanguage = $config['content']['default_language'];
         }
     }
     ?>
+    <link rel="stylesheet" href="./node_modules/tailwindcss/dist/tailwind.css">
     <script src="main.js"></script>
 </head>
 
