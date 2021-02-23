@@ -28,8 +28,10 @@ if (isset($_COOKIE['lang']) == true && isLanguageAvailable($_COOKIE['lang'])) {
 $rawMDContent = getRawMDForAGivenLanguage($language);
 if ($rawMDContent != false) {
     $content = getRawMDForAGivenLanguage($language);
-    $content = lauchOperationsOnContent($content);
-    require_once "gabarit.php"; //get the template and include the content inside
+    $maintitle = extractMainTitleInRawMDContent($config, $content);
+    $content = removeTheMainTitleInRawMDContent($content);
+    $content = lauchOperationsOnContent($content);  //raw MD will be transformed to HTML
+    require_once "gabarit.php"; //get the layout and include the content inside
 } else {
     require_once "error.php";    //the error page is displayed
 }

@@ -291,3 +291,32 @@ function lauchOperationsOnContent($rawTextContent)
     $doc = implode("\n", $newLines);
     return $doc;
 }
+
+//Extract the main title (the first "# ..." title of level1) in the markdown raw text, if config main title is [INSIDE]
+function extractMainTitleInRawMDContent($config, $content)
+{
+    $maintitle = $config['main-title'];
+    if ($maintitle == "[INSIDE]") {
+        $startPositionTitle = strpos($content, "# ");
+        if ($startPositionTitle !== false) {
+            $startPositionTitle = strpos($content, "# ") + 2;
+            $titleInMD = substr($content, $startPositionTitle, strpos($content, "\n", $startPositionTitle + 1) - $startPositionTitle);
+            $maintitle = $titleInMD;
+        } else {
+            $maintitle = "No title";
+        }
+    }
+    return $maintitle;
+}
+
+//Remove the main title in the markdown raw text, regardless the config
+function removeTheMainTitleInRawMDContent($content)
+{
+    $newContent = "";
+    foreach (explode("\n", $content) as $line) {
+        if (strpos(trim($line), "# ") === false) {   //validate the line only if it's not a h1 title (start with "# ")
+            $newContent .= "\n" . $line;
+        }
+    }
+    return $newContent;
+}
