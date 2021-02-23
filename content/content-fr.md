@@ -1,18 +1,14 @@
 # KanFF - Documentation technique
 Rédaction: Samuel, Relecture: Benoît. Version 1.1 du 03.11.2020.
 
-## Documentations liées spécifiques:
+## Documentations liées spécifiques
 - [Liste des pages](list-pages.md)
 - [Liste des fonctions d'aide](helpers-functions.md)
 - [Spécifications de la base de données](db-specifications.md)
 - [Structure des appels Ajax](structure-ajax-calls.md)
 
-## **Table des matières**
-<!-- MDTOC maxdepth:6 firsth1:1 numbering:0 flatten:0 bullets:1 updateOnSave:1 -->
 
 [INSERT TOC HERE]
-
-<!-- /MDTOC -->
 
 ### Cadre, description et motivation
 

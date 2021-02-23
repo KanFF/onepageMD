@@ -113,7 +113,7 @@ function trimIt($string)
 //Create HTML element with a copylink icon for a link to a section of the manual
 function createCopyLinkIconForManual($section)
 {
-    return "<span data-hrefcopy='" . $_SERVER['HTTP_HOST'] . "/?action=manual#" . createKeyNameForElementId($section) . "' class='cursorpointer linkToCopy'>" . printAnIcon("copylinkmini.png", "Copier le lien vers cette section", "copy lin icon", "icon-xsmall m-2 noborder mt-3 copylink", false) . "</span>";
+    return "<span data-hrefcopy='" . $_SERVER['HTTP_HOST'] . "/?action=manual#" . createKeyNameForElementId($section) . "' class='cursorpointer linkToCopy' style='margin-left: 10px;'>" . printAnIcon("copy.svg", "Copier le lien vers cette section", "copy lin icon", "icon-xsmall m-2 noborder mt-3 copylink", false) . "</span>";
 }
 
 //Get the title in html (including the id attribute), if the line is a title (no other possibility to add the id to the title in markdown).
@@ -124,7 +124,7 @@ function getTitleWithIdAttributeInHTMLIfIsTitle($line, $startWith, $markup)
     } else {
         $text = trimIt(substr($line, strpos($line, $startWith) + strlen($startWith), strrpos($line, "</") - strpos($line, $startWith) - strlen($startWith)));  //get the text after the space (the space is after the symbol at the start of line)
         $id = createKeyNameForElementId($text);    //convert to lowercase, replace accent chars, and replace " " and "'"
-        $result = "<div class='flexdiv  box-verticalaligncenter'><$markup id='" . $id . "' class=''>" . $text . "</$markup>";  //ex: "<h1 id='introduction'>Introduction</h1>"
+        $result = "<div style='display: flex; align-items: center;' class='flexdiv  box-verticalaligncenter'><$markup id='" . $id . "' class=''>" . $text . "</$markup>";  //ex: "<h1 id='introduction'>Introduction</h1>"
 
         //Add the copylink icon:
         $result .= createCopyLinkIconForManual($text);
@@ -160,7 +160,7 @@ function printAnIcon($iconname, $title, $alt, $cssClasses = "icon-small ml-2 mr-
     if ($id != "") {    //if not null
         $id = "id='$id'";   ///build attribute string
     }   //if null the $id will just be "" so attribute id will not exist at all.
-    $html = "<img title=\"" . $title . "\" class=\"$cssClasses\" src='view/medias/icons/$iconname' $id alt='$alt' " . (($hidden) ? "hidden" : "") . ">";
+    $html = "<img title=\"" . $title . "\" class=\"$cssClasses\" src='icons/$iconname' $id alt='$alt' " . (($hidden) ? "hidden" : "") . ">";
     if ($echo) {
         echo $html;
     } else {
@@ -255,7 +255,7 @@ function lauchOperationsOnContent($rawTextContent)
             } else {
                 $additionnalCssForImages = "width-max-content"; //for other illustrations images
             }
-            $line = str_replace("src=\"", " onerror='this.src = \"view/medias/images/imagenotfound.png\"; this.style.height = \"50px\"; this.classList = \"\"; ' class=\"$additionnalCssForImages \" src=\"$linkImages/", $line);
+            $line = str_replace("src=\"", " onerror='this.src = \"icons/imagenotfound.png\"; this.style.height = \"50px\"; this.classList = \"\"; ' class=\"$additionnalCssForImages \" src=\"$linkImages/", $line);
             $line = str_replace("href=\"", "target='_blank' href=\"$linkDocGithub/", $line);
         }
 
@@ -278,7 +278,7 @@ function lauchOperationsOnContent($rawTextContent)
             $currentLinesAreComment = true; //current and next lines will be inside the comment markup
         }
         if (contains($line, "[INSERT TOC HERE]")) { //if line contains mention to insert the table of content
-            $line = "<div class='flexdiv  box-verticalaligncenter'><h2 id=\"table-des-matieres\" class=\"width-max-content\">Table des matières</h2>" . createCopyLinkIconForManual("Table des matières") .
+            $line = "<div style='display: flex; align-items: center;' class='flexdiv  box-verticalaligncenter'><h2 id=\"table-des-matieres\" class=\"width-max-content\">Table des matières</h2>" . createCopyLinkIconForManual("Table des matières") .
                 "</div><div class='mdTOC'>" . MDToHTML($toc) . "</div>";    //insert the table of content on this line
         }
         if ($currentLinesAreComment == false && $acceptLine == true) {  //if current lines are no comments and the line is accepted
@@ -314,7 +314,7 @@ function removeTheMainTitleInRawMDContent($content)
 {
     $newContent = "";
     foreach (explode("\n", $content) as $line) {
-        if (strpos(trim($line), "# ") === false) {   //validate the line only if it's not a h1 title (start with "# ")
+        if (strpos(trim($line), "# ") !== 0) {   //validate the line only if it's not a h1 title (start with "# ")
             $newContent .= "\n" . $line;
         }
     }
