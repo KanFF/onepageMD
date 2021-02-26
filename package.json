@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/KanFF/onepageMD#readme",
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.0",
     "tailwindcss": "^2.0.3"
   }
 }

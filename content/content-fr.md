@@ -7,9 +7,6 @@ Rédaction: Samuel, Relecture: Benoît. Version 1.1 du 03.11.2020.
 - [Spécifications de la base de données](db-specifications.md)
 - [Structure des appels Ajax](structure-ajax-calls.md)
 
-
-[INSERT TOC HERE]
-
 ### Cadre, description et motivation
 
 **Le projet KanFF consiste à réaliser une application web.** Celle-ci permettrait de gérer des projets, des tâches et l'organisation du travail en général au sein des collectifs, mouvements, associations ou simples groupes de personnes réalisant des projets. Ce projet est destiné à une utilisation réelle par un nombre important de personnes.
