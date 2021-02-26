@@ -55,8 +55,18 @@ $defaultlanguage = $config['content']['default_language'];
             margin-top: 0 !important;
         }
 
-        img {
-            margin: 0 !important;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            padding-top: 5px;
+            /**When section is opened with the anchor, the titles should not be without any space with the top of the browser */
+        }
+
+        .border-none {
+            border: none !important;
         }
     </style>
 </head>
@@ -68,10 +78,10 @@ $defaultlanguage = $config['content']['default_language'];
  margin: 30px auto;
  padding: 0 15px;
  ">
-    <div class="thinBlackBorderForTitle " style="display: flex; flex-wrap: wrap;">
-        <h1 style="min-width: max-content; flex: 1; text-align: center;"><?= $maintitle ?></h1>
-        <span style="display: flex; flex-direction: column; align-items: end; justify-content: end; min-width: max-content;">
-            <span style="display: inline;">
+    <div class="thinBlackBorderForTitle flex flex-wrap">
+        <h1 class="min-w-max flex-1 text-center"><?= $maintitle ?></h1>
+        <span class="flex flex-column items-end min-w-max">
+            <span class="inline">
                 <strong><?= $config['author'] ?></strong> -
                 <a href="mailto:<?= $config['email'] ?>">Email</a> -
                 <a href="<?= prefixURLIfRelative($config['link']) ?>"><?= $config['link-placeholder'] ?></a> -
