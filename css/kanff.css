@@ -6,110 +6,99 @@
  */
 /* Header */
 select {
-  border: none !important;
-  background-color: #aedaf2 !important;
-}
-
-h2 {
-  @apply text-5xl;
+  border: none;
+  background-color: #aedaf2;
 }
 
 /* Markdown styles */
 .mdstyle {
-  line-height: 1.4 !important;
-  font-size: 1em !important;
-  word-break: normal !important;
+  line-height: 1.4;
+  font-size: 1em;
+  word-break: normal;
 }
 .mdstyle img {
-  border: 1px #717171 solid !important;
-  max-height: 900px !important;
-  border-radius: 3px !important;
-  margin-top: 5px !important;
-  margin-bottom: 10px !important;
+  border: 1px #717171 solid;
+  max-height: 900px;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .mdstyle .thinBlackBorderForTitle {
   margin: 0px !important;
-  padding-bottom: 10px !important;
-  border-bottom: 2px solid #38417f !important;
-  color: #38417f !important;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #38417f;
+  color: #38417f;
 }
 
 .mdstyle .thinBlackBorderForTitle h1 {
-  border: none !important;
-  margin: 0px !important;
-  padding: 0px !important;
+  border: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 .mdstyle h1 {
-  font-weight: bold;
-  font-size: 2em;
-  margin-top: 0 !important;
-  color: #38417f !important;
+  margin-top: 0;
+  color: #38417f;
 }
 
 .mdstyle h2 {
-  font-size: 1.7em;
-  color: #348a19 !important;
-  border-bottom: 1px solid !important;
+  color: #348a19;
+  border-bottom: 1px solid;
 }
-li {
-  list-style: initial;
-  margin-left: 15px;
-}
+
 .mdstyle h3 {
-  font-size: 1.5em;
-  color: #ff7700 !important;
+  color: #ff7700;
 }
 
 .mdstyle h4 {
-  color: #4fb6e3 !important;
+  color: #4fb6e3;
 }
 
 .mdstyle h5 {
-  color: #4fb6e3 !important;
+  color: #4fb6e3;
 }
 
 .mdstyle h6 {
-  color: #4fb6e3 !important;
+  color: #4fb6e3;
 }
 
 .mdstyle p code,
 .mdstyle li code {
-  color: darkblue !important;
-  background-color: #aedaf2 !important;
-  padding: 1px 4px !important;
-  border-radius: 5px !important;
-  font-family: Verdana !important;
-  font-size: 0.9em !important;
-  margin: 2px 0px !important;
+  color: darkblue;
+  background-color: #aedaf2;
+  padding: 1px 4px;
+  border-radius: 5px;
+  font-family: Verdana;
+  font-size: 0.9em;
+  margin: 2px 0px;
 }
 
 .mdstyle pre code {
-  color: darkblue !important;
-  background-color: transparent !important;
-  padding: 2px 5px !important;
-  border-radius: 5px !important;
-  font-family: Verdana !important;
-  font-size: 0.9em !important;
+  color: darkblue;
+  background-color: transparent;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-family: Verdana;
+  font-size: 0.9em;
 }
 
 .mdstyle pre {
-  background-color: #aedaf2 !important;
-  padding: 5px !important;
-  border-radius: 5px !important;
+  background-color: #aedaf2;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .mdstyle li {
-  margin-bottom: 10px !important;
-  margin-top: 5px !important;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 
 .mdstyle p {
-  margin-bottom: 20px !important;
-  margin-top: 10px !important;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .mdstyle .mdTOC li {
-  margin: 0 !important;
+  margin: 0;
 }
