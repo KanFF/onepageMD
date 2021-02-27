@@ -48,7 +48,8 @@
             "image-not-found-info": true,
             "image-not-found-path": "config/image-if-not-found.png",
             "relative-url-prefix": ""
-        }
+        },
+        "additionnal-values": "values.php"
     },
     "style": {
         "basic-style": "default_kanff",

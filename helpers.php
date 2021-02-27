@@ -320,3 +320,16 @@ function removeTheMainTitleInRawMDContent($content)
     }
     return $newContent;
 }
+
+//Interpolate values stored in $values inside reference ({keyname}) in $content
+function interpolateValuesInContent($content, $values)
+{
+    $words =  preg_split("/[{}]/", $content);   //split with '{' or '}', then some of the $words will be equal to $values key
+    foreach ($words as $key => $word) {
+        if (in_array($word, array_keys($values))) {
+            $words[$key] = $values[$word];    //save the value that replaced the {yyy}
+        }
+    }
+    $content = implode("", $words);
+    return $content;
+}

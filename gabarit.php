@@ -7,6 +7,15 @@
  *  Creation date: 20.02.2021
  */
 
+//Load php script to get $values (to interpolate in $content)
+$values = [];
+if ($config['content']['additionnal-values'] != null) {
+    include "content/" . $config['content']['additionnal-values'];
+}
+if (empty($values) == false) {
+    $content = interpolateValuesInContent($content, $values);
+}
+
 $title = $config['title'];
 $defaultlanguage = $config['content']['default_language'];
 ?>
