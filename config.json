@@ -52,10 +52,10 @@
     },
     "style": {
         "basic-style": "default_kanff",
-        "font-list": "Verdana, Consolas, sans-serif",
+        "font-list": "Jetbrains Mono, Consolas, sans-serif",
         "font-size": "1em",
         "body": {
-            "maxwidth": "1000px",
+            "maxwidth": "1300px",
             "font-color": "#fffff",
             "background-color": "#f7f7f7"
         },
