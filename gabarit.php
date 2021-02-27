@@ -68,10 +68,15 @@ $defaultlanguage = $config['content']['default_language'];
         .border-none {
             border: none !important;
         }
+
+        @font-face {
+            font-family: "Jetbrains Mono";
+            src: url("css/JetbrainsMono-Regular.ttf");
+        }
     </style>
 </head>
 
-<body class="prose prose-md mdstyle" style="background-color: <?= $config['style']['body']['background-color'] ?>;
+<body class="prose mdstyle" style="background-color: <?= $config['style']['body']['background-color'] ?>;
  color: <?= $config['style']['body']['font-color'] ?>;
  font-family: <?= $config['style']['font-list'] ?>;
  max-width: <?= $config['style']['body']['maxwidth'] ?>;
