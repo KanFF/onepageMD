@@ -78,18 +78,14 @@ $defaultlanguage = $config['content']['default_language'];
  margin: 30px auto;
  padding: 0 15px;
  ">
-    <div class="thinBlackBorderForTitle flex flex-wrap">
-        <h1 class="min-w-max flex-1 text-center"><?= $maintitle ?></h1>
-        <span class="flex flex-column items-end min-w-max">
-            <span class="inline">
-                <strong><?= $config['author'] ?></strong> -
-                <a href="mailto:<?= $config['email'] ?>">Email</a> -
-                <a href="<?= prefixURLIfRelative($config['link']) ?>"><?= $config['link-placeholder'] ?></a> -
-                <a href="<?= prefixURLIfRelative($config['sourcelink']) ?>">Source</a>
-            </span>
-            <span>
-                <span style="display: inline; cursor: help;" title="Version of the text (highest version of the translations)."><?= getTextVersion() ?></span>
-                <select name="language" id="sltLanguage" required>
+    <div class="thinBlackBorderForTitle my-3 flex flex-wrap">
+        <div class="my-3 w-full">
+            <h1 class="min-w-max flex-1 text-center my-3"><?= $maintitle; ?></h1>
+        </div>
+        <span class="flex flex-column items-end min-w-max w-full">
+            <div class="flex-1">
+                <span class="text-lg inline cursor-help" title="Version of the text (highest version of the translations)."><?= getTextVersion() ?></span>
+                <select name="language" id="sltLanguage" required class="rounded-sm px-1 text-sm">
                     <?php
                     $files = $config['content']['content-files'];
                     foreach ($files as $file) {
@@ -97,7 +93,10 @@ $defaultlanguage = $config['content']['default_language'];
                     }
                     ?>
                 </select>
-            </span>
+            </div>
+            <div>
+                <strong class=""><?= $config['author'] ?></strong> - <a href="mailto:<?= $config['email'] ?>">Email</a> <a href="<?= prefixURLIfRelative($config['link']) ?>"><?= $config['link-placeholder'] ?></a> <a href="<?= prefixURLIfRelative($config['sourcelink']) ?>">Source</a>
+            </div>
         </span>
     </div>
 

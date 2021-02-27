@@ -15,7 +15,8 @@ function init() {
 //Select the language by changing the cookie and reloading the page
 function selectLanguage() {
   document.cookie = "lang=" + sltLanguage.value;
-  window.location = window.location;
+  window.location.hash = "";
+  window.location.reload();
 }
 
 //Copy the section link with its anchor

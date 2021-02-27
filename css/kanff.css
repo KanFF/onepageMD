@@ -23,7 +23,6 @@ select {
 }
 
 .mdstyle .thinBlackBorderForTitle {
-  margin: 0px !important;
   padding-bottom: 10px;
   border-bottom: 2px solid #38417f;
   color: #38417f;

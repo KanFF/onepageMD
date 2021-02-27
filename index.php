@@ -33,5 +33,6 @@ if ($rawMDContent != false) {
     $content = lauchOperationsOnContent($content);  //raw MD will be transformed to HTML
     require_once "gabarit.php"; //get the layout and include the content inside
 } else {
+    $maintitle = "Erreur...";
     require_once "error.php";    //the error page is displayed
 }
