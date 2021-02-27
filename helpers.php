@@ -113,7 +113,7 @@ function trimIt($string)
 //Create HTML element with a copylink icon for a link to a section of the manual
 function createCopyLinkIconForManual($section)
 {
-    return "<span data-hrefcopy='" . $_SERVER['HTTP_HOST'] . "/?action=manual#" . createKeyNameForElementId($section) . "' class='cursor-pointer ml-3 pt-2 iconsToCopySection'>" . printAnIcon("copy.svg", "Copier le lien de cette section.", "copy link icon", "w-7 p-1 mt-3 border-none hover:bg-gray-300 bg-gray-200", false) . "</span>";
+    return "<span data-hrefcopy='" . $_SERVER['HTTP_HOST'] . "/?action=manual#" . createKeyNameForElementId($section) . "' class='inline-block cursor-pointer ml-3 iconsToCopySection items-center'>" . printAnIcon("copy.svg", "Copier le lien de cette section.", "copy link icon", "inline w-7 p-1 mb-0 border-none hover:bg-gray-300 bg-gray-200", false) . "</span>";
 }
 
 //Get the title in html (including the id attribute), if the line is a title (no other possibility to add the id to the title in markdown).
@@ -124,12 +124,12 @@ function getTitleWithIdAttributeInHTMLIfIsTitle($line, $startWith, $markup)
     } else {
         $text = trimIt(substr($line, strpos($line, $startWith) + strlen($startWith), strrpos($line, "</") - strpos($line, $startWith) - strlen($startWith)));  //get the text after the space (the space is after the symbol at the start of line)
         $id = createKeyNameForElementId($text);    //convert to lowercase, replace accent chars, and replace " " and "'"
-        $result = "<div class='flex items-start'><$markup id='" . $id . "' class=''>" . $text . "</$markup>";  //ex: "<h1 id='introduction'>Introduction</h1>"
+        $result = "<$markup id='" . $id . "' class='inline'>" . $text . "</$markup>";  //ex: "<h1 id='introduction'>Introduction</h1>"
 
         //Add the copylink icon:
         $result .= createCopyLinkIconForManual($text);
 
-        $result .= "</div>";
+        $result .= "<br>";
         return $result;
     }
 }

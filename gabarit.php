@@ -74,8 +74,16 @@ $defaultlanguage = $config['content']['default_language'];
             /**When section is opened with the anchor, the titles should not be without any space with the top of the browser */
         }
 
+        li {
+            margin-left: 10px;
+        }
+
         .border-none {
             border: none !important;
+        }
+
+        .iconsToCopySection img {
+            margin: 0 !important;
         }
 
         @font-face {
@@ -99,7 +107,7 @@ $defaultlanguage = $config['content']['default_language'];
         <span class="flex flex-wrap w-full">
             <div class="flex-1">
                 <span class="text-lg cursor-help" title="Version of the text (highest version of the translations)."><?= getTextVersion() ?></span>
-                <select name="language" id="sltLanguage" required class="rounded-sm px-1 text-sm">
+                <select name="language" id="sltLanguage" required class="rounded-sm px-1">
                     <?php
                     $files = $config['content']['content-files'];
                     foreach ($files as $file) {
