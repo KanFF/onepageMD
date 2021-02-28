@@ -1,5 +1,4 @@
-# onepageMD
-### One page website template, with responsive display, content in Markdown, additionnals PHP generated values, translations, design configs, ...
+![title image](title.png)
 
 ## Goals
 ### As the website creator
