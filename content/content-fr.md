@@ -1,6 +1,8 @@
 # onepageMD
 ### One page website template, with responsive display, content in Markdown, additionnals PHP generated values, translations, design configs, ...
 Interpolation test: Hey I'm {age} years old. My favorite value is {valueTest} and {greatText-dadd}. Let's code: {htmlinsert} !
+
+This blog exist since the {blogAgeInString}...
 ## Goals
 ### As the website creator
 - Be able **to create a one page website quickly** in a new repository.
