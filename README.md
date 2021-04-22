@@ -5,7 +5,7 @@
 - Be able **to create a one page website quickly** in a new repository.
 - Write the general content inside Markdown files, including links and images. Markdown files can be local or remote, with automatic update activatable).
 - Customizing of special values displayed at positions not usual in Markdown, with a config JSON file.
-- Interpolate PHP generated values and generate them (to keep some information up-to-date).
+- Interpolate PHP generated values and generate them (to keep some information up-to-date). Generated values can be HTML, so it's possible to generate some part of the page in full HTML with Tailwindcss usable!
 - Write translations of the content in other files.
 - Customizing the page appearance is important too: possibility to choose a stylesheet or write a new one, change content width, change font family and font sizes, import new fonts, ...
 - Insert automatic table of contents generated in PHP.
