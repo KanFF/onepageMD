@@ -101,9 +101,11 @@ $defaultlanguage = $config['content']['default_language'];
  padding: 0 15px;
  ">
     <div class="thinBlackBorderForTitle my-3">
-        <div class="my-3 w-full">
-            <h1 class="max-w-max flex-1 text-center my-3"><?= $maintitle; ?></h1>
-        </div>
+        <?php if ($maintitle != null) { ?>
+            <div class="my-3 w-full">
+                <h1 class="max-w-max flex-1 text-center my-3"><?= $maintitle; ?></h1>
+            </div>
+        <?php } ?>
         <span class="flex flex-wrap w-full">
             <div class="flex-1">
                 <span class="text-lg cursor-help" title="Version of the text (highest version of the translations)."><?= getTextVersion() ?></span>
