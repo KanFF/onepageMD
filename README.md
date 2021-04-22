@@ -2,7 +2,7 @@
 
 ## Goals
 ### As the website creator
-- Be able **to create a one page website quickly** in a new repository.
+- Be able **to create a one page website quickly** in a new repository with the `Use this template` button.
 - Write the general content inside Markdown files, including links and images. Markdown files can be local or remote, with automatic update activatable).
 - Customizing of special values displayed at positions not usual in Markdown, with a config JSON file.
 - Interpolate PHP generated values and generate them (to keep some information up-to-date). Generated values can be HTML, so it's possible to generate some part of the page in full HTML with Tailwindcss usable!
